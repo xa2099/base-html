@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantarell');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+
+:root {
+    --font-size      : 16px; /* Changing this scales everyting. */
+    --content-width  : 45em;
+    --font           : Cantarell;
+    --font-mono      : 'Source Code Pro';
+    --foreground     : #3b4252;
+    --foreground-alt : #4c566a;
+    --background     : #eceff4;
+    --background-alt : #d8dee9;
+    --good           : #a3be8c;
+    --bad            : #bf616a;
+    --warn           : #ebcb8b;
+    --roundness      : 0.2em;
+}
+
+html, body, input, select, button, textarea {
+    margin           : 0;
+    padding          : 0;
+    color            : var(--foreground);
+    background-color : var(--background);
+    font-family      : var(--font), sans-serif;
+    font-size        : var(--font-size);
+    line-height      : 1.3em;
+}
+
+/* ---------------------------------------- Header, footer and navigation. -- */
+
+header {
+    margin           : 0 0 1em 0;
+    padding          : 0;
+    position         : sticky;
+    top              : 0;
+    background-color : var(--foreground);
+}
+
+header > div {
+    margin           : 0;
+    padding          : 0.75em 1em;
+    display          : flex;
+    margin           : auto;
+    max-width        : var(--content-width);
+    justify-content  : space-between;
+    align-items      : center;
+}
+
+header > div > a {
+    font-size        : 1.25em;
+    text-decoration  : none;
+    color            : var(--background);
+}
+
+header > div > a.icon {
+    font-size        : 2.2em;
+    opacity          : 0.7;
+    color            : var(--background);
+}
+
+header > div > a.icon:hover {
+    opacity          : 1;
+}
+
+header > div > a.icon:hover {
+    color            : var(--background);
+}
+
+footer {  
+    max-width        : var(--content-width); 
+    margin           : 1.5em 0 0 0; 
+    margin           : auto;
+    padding          : 1em 0;
+    text-align       : right;
+    color            : var(--foreground-alt);
+    border-top       : 1px solid var(--background-alt);
+}
+
+/* ---------------------------------------- Table of contents -- */
+
+nav {
+    margin           : 0;
+    padding          : 1em;
+    max-width        : var(--content-width);
+    margin           : auto;
+}
+
+nav > h1 {
+    display          : flex;
+    justify-content  : space-between;
+    align-items      : center;
+    margin           : 1.5em 0 0 0;
+    padding          : 0.5em 0.2em 0.5em 0.2em;
+    font-size        : 1.2em;
+    color            : var(--foreground);
+    border-bottom    : 1px solid var(--background-alt);
+    cursor           : pointer;
+}
+    
+nav a {
+    display          : flex;
+    justify-content  : space-between;
+    align-items      : center;
+    margin           : 0;
+    padding          : 0.5em 0.2em 0.5em 1em;
+    font-size        : 1.2em;
+    max-width        : var(--content-width);
+    list-style-type  : none;
+    color            : var(--foreground);
+    border-bottom    : 1px solid var(--background-alt);
+    text-decoration  : none;
+}
+
+nav a:hover, nav h1:hover {
+    color            : var(--foreground);
+    background-color : var(--background-alt);
+}
+
+nav button {
+    position         : absolute;
+    top              : 1em;
+    right            : 1em;
+    text-decoration  : none;
+    font-size        : 2em;
+    color            : var(--foreground);
+    background       : none;
+    border           : none;
+}
+
+/* ---------------------------------------- Main content --*/
+
+main {
+    margin           : 0;
+    padding          : 1em;
+    max-width        : var(--content-width);
+    margin           : auto;
+}
+
+h1, h2 {
+    display          : flex;
+    justify-content  : space-between;
+    align-items      : center;
+    margin           : 1em 0 1em 0;
+    padding          : 0 0 0.5em 0;
+    font-size        : 1.5em;
+    border-bottom    : 1px solid var(--background-alt);
+}
+
+p {
+    margin           : 0 0 1em 0;
+    padding          : 0;
+}
+
+pre {
+    margin           : 0 0 1em 0;
+    padding          : 0.6em 1em;
+    border-radius    : var(--roundness);
+    background-color : var(--foreground-alt);
+    color            : var(--background-alt);
+    font-family      : var(--font-mono);
+    font-size        : 0.85em;
+}
+
+code {
+    padding          : 0.1em 0.3em;
+    border-radius    : var(--roundness);
+    background-color : var(--foreground-alt);
+    color            : var(--background-alt);
+    font-family      : var(--font-mono);
+    font-size        : 0.85em;
+    white-space      : nowrap;
+}
+
+img {
+    max-width        : 100%;
+}
+
+img.framed {
+    max-width        : 100%;
+    box-sizing       : border-box;
+    padding          : 0.7em;
+    border           : 1px solid var(--background-alt);
+    background-color : white;
+}
+
+/* ---------------------------------------- Form -- */
+
+button {
+    margin           : 0;
+    padding          : 0.6em 1.2em;
+    border           : 0;
+    display          : inline-flex;
+    justify-content  : center;
+    align-items      : center;
+    cursor           : pointer;
+    background-color : var(--foreground-alt);
+    color            : var(--background);
+    border-radius    : var(--roundness);
+    font-size        : var(--font-size);
+}
+
+button.good { background-color : var(--good) }
+button.bad  { background-color : var(--bad)  }
+
+button:hover {
+    filter           : brightness(1.1);
+    /* box-shadow       : 0 0.1em 0.2em 0 rgba(0, 0, 0, 0.2), 0 0.1em 0.2em 0 rgba(0, 0, 0, 0.2); */
+}
+
+button > span.icon {
+    padding          : 0 0.3em 0 0;
+    font-size        : 1.2em;
+    line-height      : 1em;
+}
+
+/* ---------------------------------------- Flex -- */
+
+.flexed {
+    display          : flex; 
+    justify-content  : space-between; 
+    align-items      : center; 
+    gap              : 1em;
+    flex-wrap        : nowrap;
+}
+
+.flexed.top {
+    align-items      : flex-start;
+}
+
+.flexed > * {
+    flex-grow        : 1;
+}
+
+/* ---------------------------------------- Icon -- */
+
+.icon {
+    margin           : 0;
+    padding          : 0;
+    font-family      : 'Material Symbols Outlined';
+    font-weight      : normal;
+    font-style       : normal;
+    line-height      : 1;
+    letter-spacing   : normal;
+    text-transform   : none;
+    display          : inline-block;
+}
