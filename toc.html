@@ -9,23 +9,23 @@
         <script src="base.js"></script>
     </head>
     <body>
-        <header>
+        <div class="header">
             <div>
                 <a href="/">Roman Romanenko</a>
-                <a href="#" onclick="history.back()" class="icon">cancel_presentation</a>
+                <a href="#" onclick="history.back()" class="icon">cancel</a>
             </div>
-        </header>
-        <nav>
+        </div>
+        <div class="navigation">
             <h1 onclick="toggle('chapter-1')">First Chapter<span class="icon">keyboard_arrow_down</span></h1>
-            <div id="chapter-1" style="display:none">
-                <a href="/">First row.<span class="icon">bug_report</span></a>
+            <div id="chapter-1">
+                <a href="/hero.html">Hero page example.<span class="icon">domino_mask</span></a>
                 <a href="/">Home Page<span class="icon">circle_notifications</span></a>
                 <a href="/">Some other page link.<span class="icon">app_shortcut</span></a>
                 <a href="/">Some other page link. Some other page link.<span class="icon">lightbulb_circle</span></a>
                 <a href="/">Home Page<span class="icon">webhook</span></a>
             </div>
             <h1 onclick="toggle('chapter-2')">Second Chapter<span class="icon">keyboard_arrow_down</span></h1>
-            <div id="chapter-2" style="display:none">
+            <div id="chapter-2" class="hide">
                 <a href="/">Some other page link.<span class="icon">network_intelligence_update</span></a>
                 <a href="/">Some other page link. Some other page link.<span class="icon">looks_5</span></a>
                 <a href="/">Home Page<span class="icon">savings</span></a>
@@ -33,6 +33,6 @@
                 <a href="/">Some other page link. Some other page link.<span class="icon">fastfood</span></a>
                 <a href="/">Home Page<span class="icon">cloud_off</span></a>
             </div>
-        </nav>
+        </div>
     </body>
 </html>
